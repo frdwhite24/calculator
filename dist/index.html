@@ -1,11 +1,64 @@
 <!DOCTYPE html><html><head>
-    <meta charset="utf-8">
-    <title>Yew App</title>
-  
-<link rel="preload" href="/calculator-1985749d724a0a6_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-<link rel="modulepreload" href="/calculator-1985749d724a0a6.js"></head>
+  <meta charset="utf-8">
+  <title>Yew App</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    * {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      overflow-wrap: break-word;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+
+<link rel="preload" href="/calculator-9035375752f5e9fc_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+<link rel="modulepreload" href="/calculator-9035375752f5e9fc.js"></head>
+
 <body>
-<script type="module">import init from '/calculator-1985749d724a0a6.js';init('/calculator-1985749d724a0a6_bg.wasm');</script><script>(function () {
+<script type="module">import init from '/calculator-9035375752f5e9fc.js';init('/calculator-9035375752f5e9fc_bg.wasm');</script><script>(function () {
     var protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
     var url = protocol + '//' + window.location.host + '/_trunk/ws';
     var poll_interval = 5000;

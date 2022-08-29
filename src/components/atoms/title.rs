@@ -1,3 +1,4 @@
+use stylist::{style, yew::styled_component};
 use yew::prelude::*;
 
 #[derive(PartialEq)]
@@ -7,18 +8,24 @@ pub enum Level {
 }
 
 #[derive(Properties, PartialEq)]
-pub struct Props {
+pub struct TitleProps {
     pub text: String,
     pub level: Level,
 }
 
-#[function_component(Title)]
-pub fn title(props: &Props) -> Html {
+#[styled_component(Title)]
+pub fn title(props: &TitleProps) -> Html {
+    let stylesheet = style!(
+        r#"
+            border: 1px solid red;
+        "#
+    )
+    .unwrap();
     html! {
         if &props.level == &Level::One {
-            <h1>{&props.text}</h1>
+            <h1 class={stylesheet}>{&props.text}</h1>
         } else if &props.level == &Level::Two {
-            <h2>{&props.text}</h2>
+            <h2 class={stylesheet}>{&props.text}</h2>
         }
     }
 }
